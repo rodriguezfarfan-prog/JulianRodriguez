@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Integrador III - Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Calculadora</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="curriculum.html">Currículum</a></li>
+                <li><a href="Calculadora.html">Calculadora</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="documentacion">Documentación</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="section">
+        <div class="container">
+            <h1 class="main-title">Proyecto Integrador III</h1>
+            <p class="subtitle">Desarrollo Web con JavaScript</p>
+            <div class="visit-counter">
+                <h3>Contador de Visitas</h3>
+                <p class="counter-display">🔢 <span id="visitCounter">0</span> visitas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Calculadora -->
+    <section id="calculadora" class="section">
+        <div class="container">
+            <h2 class="section-title">Calculadora Interactiva</h2>
+            <p class="section-description">Juego asignado: Calculadora funcional con JavaScript</p>
+            
+            <div class="calculator">
+                <div class="display">
+                    <div class="previous" id="previous"></div>
+                    <div class="current" id="current">0</div>
+                </div>
+                <div class="buttons">
+                    <button class="clear" onclick="clearAll()">C</button>
+                    <button class="clear" onclick="deleteLast()">←</button>
+                    <button class="operator" onclick="setOperator('/')">÷</button>
+                    <button class="operator" onclick="setOperator('*')">×</button>
+                    
+                    <button class="number" onclick="appendNumber('7')">7</button>
+                    <button class="number" onclick="appendNumber('8')">8</button>
+                    <button class="number" onclick="appendNumber('9')">9</button>
+                    <button class="operator" onclick="setOperator('-')">−</button>
+                    
+                    <button class="number" onclick="appendNumber('4')">4</button>
+                    <button class="number" onclick="appendNumber('5')">5</button>
+                    <button class="number" onclick="appendNumber('6')">6</button>
+                    <button class="operator" onclick="setOperator('+')">+</button>
+                    
+                    <button class="number" onclick="appendNumber('1')">1</button>
+                    <button class="number" onclick="appendNumber('2')">2</button>
+                    <button class="number" onclick="appendNumber('3')">3</button>
+                    <button class="equals" onclick="calculate()">=</button>
+                    
+                    <button class="number zero" onclick="appendNumber('0')">0</button>
+                    <button class="decimal" onclick="appendNumber('.')">.</button>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h4>📖 Instrucciones de uso:</h4>
+                <ul>
+                    <li>Haz clic en los números y operadores para realizar cálculos</li>
+                    <li>También puedes usar tu teclado: números, +, -, *, /, Enter (=), Escape (C)</li>
+                    <li>El botón "C" limpia todo, el botón "←" borra el último dígito</li>
+                    <li>Soporta números decimales usando el punto (.)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Documentación -->
+    <section id="documentacion" class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Documentación Técnica</h2>
+            
+            <div class="doc-card">
+                <h3>📋 Descripción General del Proyecto</h3>
+                <p><strong>Propósito:</strong> Desarrollar una página web personal que integre un currículum digital, contador de visitas y una calculadora interactiva programada en JavaScript.</p>
+                <p><strong>Público Objetivo:</strong> Evaluadores académicos y visitantes interesados en proyectos de desarrollo web.</p>
+                <p><strong>Funcionalidades Principales:</strong></p>
+                <ul>
+                    <li>Currículum digital con información académica y habilidades</li>
+                    <li>Contador de visitas persistente</li>
+                    <li>Calculadora interactiva con operaciones básicas</li>
+                    <li>Documentación técnica completa del proyecto</li>
+                </ul>
+            </div>
+
+            <div class="doc-card">
+                <h3>🛠️ Tecnologías Utilizadas</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <strong>HTML5</strong>
+                        <p>Estructura semántica del sitio web</p>
+                    </div>
+                    <div class="tech-item">
+                        <strong>CSS3</strong>
+                        <p>Estilos, diseño responsivo y animaciones</p>
+                    </div>
+                    <div class="tech-item">
+                        <strong>JavaScript</strong>
+                        <p>Lógica de la calculadora y contador de visitas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doc-card">
+                <h3>🎮 Explicación del Juego: Calculadora</h3>
+                <p><strong>Nombre:</strong> Calculadora Interactiva</p>
+                <p><strong>Lógica de Funcionamiento:</strong></p>
+                <ul>
+                    <li>Utiliza tres variables principales: current (número actual), previous (número anterior) y operator (operador seleccionado)</li>
+                    <li>Al presionar números, se concatenan al valor actual</li>
+                    <li>Al seleccionar un operador, se guarda el número actual como "anterior" y se prepara para el siguiente número</li>
+                    <li>Al presionar "=", se ejecuta la operación matemática correspondiente usando switch/case</li>
+                    <li>Incluye validaciones para evitar múltiples puntos decimales y división por cero</li>
+                </ul>
+                
+                <p><strong>Retos Técnicos:</strong></p>
+                <ul>
+                    <li>Manejo correcto del estado entre operaciones encadenadas</li>
+                    <li>Implementación de soporte para teclado físico</li>
+                    <li>Validación de entrada de decimales</li>
+                    <li>Actualización en tiempo real del display</li>
+                </ul>
+
+                <p><strong>Aprendizajes Obtenidos:</strong></p>
+                <ul>
+                    <li>Manipulación del DOM con JavaScript</li>
+                    <li>Manejo de eventos (click y keyboard)</li>
+                    <li>Control de estados y variables globales</li>
+                    <li>Validación de datos de entrada</li>
+                    <li>Diseño de interfaz de usuario intuitiva</li>
+                </ul>
+            </div>
+
+            <div class="doc-card">
+                <h3>💡 Código Comentado - Función Principal</h3>
+                <pre><code>// Función para realizar el cálculo
+function calculate() {
+    // Validar que tenemos todos los datos necesarios
+    if (operator === null || previous === '' || current === '') return;
+    
+    // Convertir strings a números
+    const prev = parseFloat(previous);
+    const curr = parseFloat(current);
+    let result;
+    
+    // Realizar la operación según el operador
+    switch(operator) {
+        case '+':
+            result = prev + curr;  // Suma
+            break;
+        case '-':
+            result = prev - curr;  // Resta
+            break;
+        case '*':
+            result = prev * curr;  // Multiplicación
+            break;
+        case '/':
+            // Validar división por cero
+            result = curr !== 0 ? prev / curr : 'Error';
+            break;
+    }
+    
+    // Actualizar el display con el resultado
+    current = result.toString();
+    operator = null;
+    previous = '';
+    updateDisplay();
+}</code></pre>
+            </div>
+
+            <div class="doc-card">
+                <h3>🎓 Conclusión Académica</h3>
+                <p><strong>Reflexión sobre el proceso:</strong></p>
+                <p>El desarrollo de este proyecto integrador permitió aplicar de manera práctica los conocimientos adquiridos en desarrollo web. La implementación de la calculadora representó un desafío significativo en cuanto a la lógica de programación, especialmente en el manejo de estados y la validación de operaciones.</p>
+                
+                <p><strong>Dificultades superadas:</strong></p>
+                <ul>
+                    <li>Gestión correcta del estado entre múltiples operaciones</li>
+                    <li>Sincronización entre la entrada por mouse y teclado</li>
+                    <li>Diseño responsivo y atractivo visualmente</li>
+                    <li>Implementación del contador de visitas persistente</li>
+                </ul>
+
+                <p><strong>Posibles mejoras:</strong></p>
+                <ul>
+                    <li>Agregar operaciones avanzadas (raíz cuadrada, potencias, porcentajes)</li>
+                    <li>Implementar historial de cálculos</li>
+                    <li>Añadir temas personalizables (modo oscuro/claro)</li>
+                    <li>Optimizar para dispositivos móviles con gestos táctiles</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Proyecto Integrador III - 2025</p>
+            <p>Estudiante: Julián / Cristian | Juego: Calculadora</p>
+        </div>
+    </footer>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>

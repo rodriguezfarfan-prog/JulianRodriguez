@@ -1,0 +1,320 @@
+// ============================
+// VARIABLES
+// ============================
+$color-primario: #004080;
+$color-secundario: #0066cc;
+$color-fondo: #f8f9fa;
+$color-texto: #333;
+$color-blanco: #fff;
+$sombras-suaves: 0px 4px 6px rgba(0,0,0,0.1);
+$radio-borde: 10px;
+
+// ============================
+// RESETEO GENERAL
+// ============================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: $color-fondo;
+  color: $color-texto;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+// ============================
+// HEADER
+// ============================
+header {
+  background: $color-primario;
+  color: $color-blanco;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .foto-header {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid $color-blanco;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+      &:hover {
+        transform: scale(3) rotate(3deg);
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+        cursor: zoom-in;
+      }
+    }
+  }
+
+  .titulo-header {
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      color: lighten($color-primario, 40%);
+    }
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: $color-blanco;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+
+    &.active {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      padding: 15px;
+      background-color: rgba(0, 47, 94, 0.86);
+      border-radius: $radio-borde;
+      justify-content: space-evenly;
+      align-items: center;
+
+      li a {
+        text-decoration: none;
+        color: $color-blanco;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        background-color: $color-primario;
+        transition: background 0.3s;
+        display: block;
+
+        &:hover {
+          background: $color-secundario;
+        }
+      }
+    }
+  }
+}
+
+// ============================
+// MAIN
+// ============================
+main {
+  text-align: justify;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+// ============================
+// CARD
+// ============================
+.card {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: $color-blanco;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: $radio-borde;
+  box-shadow: $sombras-suaves;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+  }
+
+  img.perfil {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .info {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+
+  .redes {
+    a {
+      margin: 0.3rem;
+      text-decoration: none;
+      background: $color-primario;
+      color: $color-blanco;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+
+      &:hover {
+        background: $color-secundario;
+      }
+    }
+  }
+}
+
+// ============================
+// SECCIONES GENERALES
+// ============================
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid $color-primario;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+// ============================
+// HABILIDADES Y EXPERIENCIA
+// ============================
+.habilidad, .experiencia {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  > div {
+    flex: 1;
+    background: $color-blanco;
+    padding: 1rem;
+    border-radius: $radio-borde;
+    box-shadow: $sombras-suaves;
+  }
+
+  ul {
+    list-style: disc inside;
+    margin-left: 1rem;
+  }
+}
+
+.experiencia > div {
+  background: rgba(10, 86, 109, 0.185);
+}
+
+// ============================
+// FOOTER
+// ============================
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: $color-primario;
+  color: $color-blanco;
+}
+
+// ============================
+// MEDIA QUERIES
+// ============================
+@media (min-width: 850px) {
+  body {
+    font-size: 1rem;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    .menu-toggle {
+      display: none;
+    }
+
+    nav {
+      display: block;
+      width: auto;
+
+      ul {
+        flex-direction: row;
+        gap: 1.5rem;
+        margin-top: 0;
+        padding: 15px;
+        background-color: rgba(0, 47, 94, 0.86);
+        border-radius: $radio-borde;
+      }
+    }
+  }
+
+  .card {
+    flex-direction: row;
+    text-align: left;
+
+    img.perfil {
+      margin: 0 1.5rem 0 0;
+      width: 180px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .habilidad, .experiencia {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  header {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  nav ul li a {
+    padding: 0.6rem 1.2rem;
+  }
+}

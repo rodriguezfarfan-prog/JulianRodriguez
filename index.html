@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Portafolio - Página Principal</title>
+    <link rel="stylesheet" href="CSS/stylos.css">
+</head>
+<body>
+    <header>
+    <div class="header-left">
+        <img src="files/02.jpg" alt="Foto personal" class="foto-header">
+        <div class="titulo-header">
+        <h1>Julian David Rodríguez Farfán</h1>
+        <h2>Ingeniero de Sistemas</h2>
+        </div>
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+    <nav>
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="curriculum.html">Currículum</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <!-- Información básica -->
+        <section>
+            <h2>Acerca de mí</h2>
+            <figure>
+               
+            </figure><br>
+             <p>
+                <p>
+                Tengo <strong>19 años</strong> y soy estudiante de <strong>Ingeniería de Sistemas</strong>. Me destaco en <strong>programación con Java</strong>,<br>
+                además de tener conocimientos en <strong>HTML, CSS, JavaScript</strong> y bases de datos <strong>SQL y PL/SQL Oracle</strong>. <br> 
+                Disfruto trabajar en equipo y me caracterizo por la <strong>organización, productividad y resolución de problemas</strong>.
+            </p>
+        </section>
+            <!-- Habilidades e intereses -->
+        <section class="habilidades">
+            <h2>Habilidades e Intereses</h2>
+            <ul>
+                <li><strong>Programación:</strong> Java y manejo de librerías</li>
+                <li><strong>Desarrollo web:</strong> HTML, CSS y JavaScript</li>
+                <li><strong>Bases de datos:</strong> SQL y PL/SQL Oracle</li>
+                <li><strong>Hardware:</strong> Ensamblaje y mantenimiento de equipos</li>
+                <li><strong>Ofimática:</strong> Office 365</li>
+                <li><strong>Habilidades blandas:</strong> Organización, productividad, resolución de problemas, trabajo en equipo</li>
+            </ul>
+        </section>
+    </main>
+
+
+    <footer>
+        <!-- información de contacto -->
+        <h3>Contacto</h3>
+        <address>
+            <strong>Correo:</strong> rodriguezfarfan61@gmail.com <br>
+            <strong>Teléfono:</strong> +57 319 696 6976 <br>
+            <strong>Ciudad:</strong> Bogotá D.c, Colombia
+        </address><br>
+
+        <p>&copy; 2025 Julian David Rodriguez Farfán</p>
+
+        <p class="contador">Visitas a esta página: <span id="contador">0</span></p>
+    </footer>
+    <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+<script src="./script.js"></script>
+</body>
+</html>

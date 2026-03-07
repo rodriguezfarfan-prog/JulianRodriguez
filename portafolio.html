@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio de Proyectos</title>
+    <link rel="stylesheet" href="CSS/flex.css">
+</head>
+<body>
+    <header>
+        <h1>Portafolio de Proyectos</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="curriculum.html">Currículum</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portafolio">
+            <figure>
+                <h3>Proyecto Registro de Notas</h3>
+                <img src="files/proyecto 1.png" alt="Imagen de proyecto 1">
+                <figcaption>
+                    Este proyecto fue desarrollado en <strong>Java</strong> utilizando varias librerías para la creación de la interfaz gráfica. 
+                    Se trata de <mark>un sistema de registro de notas</mark> que almacena la información directamente en una base de datos y calcula automáticamente 
+                    la nota definitiva de cada estudiante. Además, implementa un sistema de ponderación donde cada corte(nota) tiene un valor porcentual dentro del total de la materia.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <h3>Proyecto POO</h3>
+                <img src="files/proyecto 2.png" alt="Imagen de proyecto 2">
+                <figcaption>
+                    Este es un proyecto bastante sencillo que se centra en <strong>POO</strong> (Programación Orientada a Objetos) haciendo uso de <strong>Java</strong>. 
+                    Su finalidad es mostrar las personas junto a sus roles y su sueldo según la opción que se seleccione.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <h3>Simulador de potencial eléctrico</h3>
+                <img src="files/proyecto 3.png" alt="Imagen de proyecto 3">
+                <figcaption>
+                    Este es un proyecto diseñado para simular <mark>el potencial eléctrico en un punto</mark>. 
+                    Se puede usar como una <strong>calculadora</strong> en caso de estar cursando este tema en Física eléctrica, ya que facilita los resultados tanto en decimales como en notación científica.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <h3>Sistema Bibliotecario</h3>
+                <img src="files/proyecto 4.png" alt="Imagen de proyecto 4">
+                
+                <figcaption>
+                    Este proyecto consta de un sistema bibliotecario conectado a un base datos. Fue desarrollado haciendo uso de <strong>Java</strong> y varias 
+                    librerías para el desarrollo de la interfaz gráfica y la conexión a la base de datos en <strong>MySQL</strong>. 
+                    Solo permite visualizar todo lo que esté registrado en la base de datos, según la selección del usuario; tal como: visualizar los libros disponibles, los préstamos realizados con fecha y la cantidad de préstamos por persona.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <h3>Sistema Bibliotecario web</h3>
+                <video src="files/proyecto 5.mp4" alt="video de proyecto 5" controls muted></video>
+                <figcaption>
+                    Este proyecto es una <strong>mejora del sistema bibliotecario anterior</strong>. 
+                    Fue desarrollado utilizando <strong>HTML y CSS</strong> para la estructuración de la página web, y <strong>JavaScript</strong> para gestionar las acciones conectadas a la base de datos en las páginas dinámicas. <br> 
+                    
+                    El sistema permite <strong>visualizar los libros disponibles</strong> en la biblioteca junto a toda su información así como <strong>consultar los préstamos realizados</strong>, mostrando la persona a la que se le prestó y la fecha correspondiente. 
+                    También permite <strong>visualizar los préstamos activos por usuario</strong>.<br><br>
+
+                    Incluye un <strong>menú de navegación</strong> que facilita el acceso a las diferentes secciones:
+                    <ul class="video">
+                        <li><strong>"Acerca de"</strong>: Muestra toda la información sobre la biblioteca, horarios de atención, contacto, etc.</li>
+                        <li><strong>"Servicios"</strong>: Permite registrar nuevos préstamos y eliminar préstamos existentes, todo <strong>conectado a la base de datos</strong> y reflejado en la página principal.</li>
+                        <li><strong>"Sede"</strong>: Enlaza directamente con la ubicación en <strong>Google Maps</strong>.</li> 
+                    </ul>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <h3>Calculadora</h3>
+                <a href="calculadora.html" target="_blank">
+                    <img src="files/proyecto 6.png" alt="Imagen de proyecto 6" style="cursor: pointer;">
+                </a>
+                
+                <figcaption>
+                    Esta es una calculadora funcional desarrollada con <strong>HTML, CSS y JavaScript</strong>. 
+                    Permite realizar operaciones matemáticas básicas como suma, resta, multiplicación y división.
+                    <br><em><u>Haz clic en la imagen para abrir la calculadora.</u></em>
+                </figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+           <strong>Contacto:</strong> rodriguezfarfan61@gmail.com | Tel: +57 319 696 6976
+        </address>
+        <p>&copy; 2025 Julian David Rodriguez Farfán</p>
+         <p class="contador">Visitas a esta página: <span id="contador">0</span></p>
+    </footer>
+<script src="./script.js"></script>
+    <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+</body>
+</html>
